@@ -164,11 +164,11 @@ function CelesteHero() {
                             animate="visible"
                         >
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 tracking-tight leading-tight">
-                                <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
+                                <span className="text-white">
                                     Meet Celeste:
                                 </span>
                                 <br />
-                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white/90 to-rose-300">
+                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-celeste-primary to-celeste-secondary">
                                     Your AI Presentation Partner
                                 </span>
                             </h1>
@@ -180,42 +180,49 @@ function CelesteHero() {
                             initial="hidden"
                             animate="visible"
                         >
-                            <p className="text-lg sm:text-xl text-white/60 mb-8 leading-relaxed font-light max-w-2xl lg:mx-0 mx-auto">
+                            <p className="text-xl sm:text-2xl text-white/70 mb-10 leading-relaxed font-light max-w-2xl lg:mx-0 mx-auto">
                                 Create stunning presentations in minutes, not hours. Let AI handle the design while you focus on your message. Professional results, zero design skills required.
                             </p>
                         </motion.div>
 
-                        {/* Email Capture Form */}
+                        {/* Social Proof & Urgency */}
                         <motion.div
                             custom={3}
                             variants={fadeUpVariants}
                             initial="hidden"
                             animate="visible"
-                            className="mb-8"
+                            className="mb-6"
                         >
-                            <div className="flex flex-col sm:flex-row gap-3 max-w-md lg:mx-0 mx-auto">
-                                <Input 
-                                    type="email" 
-                                    placeholder="Enter your email address"
-                                    className="flex-1 bg-white/[0.05] border-white/[0.1] text-white placeholder:text-white/40 focus:border-indigo-400/50 h-12"
-                                />
-                                <Button className="h-12 px-8 bg-gradient-to-r from-indigo-500 to-rose-500 hover:from-indigo-600 hover:to-rose-600 text-white font-medium whitespace-nowrap">
-                                    Get Early Access
-                                    <ArrowRight className="ml-2 h-4 w-4" />
-                                </Button>
+                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 text-white/60 mb-4">
+                                <div className="flex items-center gap-2">
+                                    <Users className="h-4 w-4" />
+                                    <span className="text-sm font-medium">Join 1,000+ professionals already on the list</span>
+                                </div>
+                                <div className="px-3 py-1 bg-celeste-primary/20 border border-celeste-primary/30 rounded-full">
+                                    <span className="text-xs text-celeste-primary font-medium">✨ Beta opens October 2024</span>
+                                </div>
                             </div>
                         </motion.div>
 
-                        {/* Social Proof */}
+                        {/* Email Capture Form */}
                         <motion.div
                             custom={4}
                             variants={fadeUpVariants}
                             initial="hidden"
                             animate="visible"
-                            className="flex items-center justify-center lg:justify-start gap-2 text-white/40"
+                            className="mb-8"
                         >
-                            <Users className="h-4 w-4" />
-                            <span className="text-sm">Join 1,000+ professionals already on the list</span>
+                            <div className="flex flex-col sm:flex-row gap-4 max-w-lg lg:mx-0 mx-auto">
+                                <Input 
+                                    type="email" 
+                                    placeholder="Enter your email address"
+                                    className="flex-1 bg-white/[0.08] border-white/[0.15] text-white placeholder:text-white/50 focus:border-celeste-primary/50 focus:ring-celeste-primary/20 h-14 text-lg rounded-2xl px-6 transition-all duration-300"
+                                />
+                                <Button className="h-14 px-8 bg-gradient-to-r from-celeste-primary to-celeste-secondary hover:from-celeste-primary/90 hover:to-celeste-secondary/90 text-white font-semibold whitespace-nowrap rounded-2xl transition-all duration-300 hover:shadow-[var(--shadow-celeste-glow)] hover:scale-105">
+                                    Get Early Access
+                                    <ArrowRight className="ml-2 h-5 w-5" />
+                                </Button>
+                            </div>
                         </motion.div>
 
                         {/* Features List */}

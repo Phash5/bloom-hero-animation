@@ -38,6 +38,20 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
+    /* Celeste Brand Colors */
+    --celeste-primary: 231 90% 65%;
+    --celeste-secondary: 350 89% 67%;
+    --celeste-accent: 270 95% 75%;
+    --celeste-glow: 231 90% 65%;
+    
+    /* Gradients */
+    --gradient-celeste: linear-gradient(135deg, hsl(var(--celeste-primary)), hsl(var(--celeste-secondary)));
+    --gradient-celeste-subtle: linear-gradient(135deg, hsl(var(--celeste-primary) / 0.1), hsl(var(--celeste-secondary) / 0.1));
+    
+    /* Shadows */
+    --shadow-celeste-glow: 0 0 40px hsl(var(--celeste-glow) / 0.3);
+    --shadow-celeste-soft: 0 10px 30px -10px hsl(var(--celeste-primary) / 0.2);
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;

@@ -57,6 +57,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        celeste: {
+          primary: "hsl(var(--celeste-primary))",
+          secondary: "hsl(var(--celeste-secondary))",
+          accent: "hsl(var(--celeste-accent))",
+          glow: "hsl(var(--celeste-glow))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
