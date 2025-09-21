@@ -107,9 +107,7 @@ function CelesteHero() {
                         </motion.div>
 
                         <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
-                            <p className="text-xl sm:text-2xl text-white/70 mb-10 leading-relaxed font-light max-w-2xl lg:mx-0 mx-auto">
-                                Create stunning presentations in minutes, not hours. Let AI handle the design while you focus on your message. Professional results, zero design skills required.
-                            </p>
+                            <p className="text-xl sm:text-2xl text-white/70 mb-10 leading-relaxed font-light max-w-2xl lg:mx-0 mx-auto">Create stunning presentations in minutes, not hours. Let Celeste handle the design while you focus on your message. Professional results, zero design skills required.</p>
                         </motion.div>
 
                         {/* Social Proof & Urgency */}
