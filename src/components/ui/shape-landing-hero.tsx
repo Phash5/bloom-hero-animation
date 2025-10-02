@@ -173,7 +173,7 @@ function CelesteHero() {
                                 </div>
                             }
                         >
-                            <img src={presentationMockup} alt="Celeste AI Presentation Builder Interface" className="w-full h-full object-cover object-left-top rounded-lg" />
+                            <img src={presentationMockup} alt="Celeste AI Presentation Builder Interface" className="w-full h-full object-contain rounded-lg" />
                         </ContainerScroll>
                     </motion.div>
                 </div>
