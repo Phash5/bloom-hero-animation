@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
-import celesteMockup from "@/assets/celeste-mockup.png";
+import presentationMockup from "@/assets/presentation-mockup.png";
 function ElegantShape({
   className,
   delay = 0,
@@ -173,7 +173,7 @@ function CelesteHero() {
                                 </div>
                             }
                         >
-                            <img src={celesteMockup} alt="Celeste AI Presentation Builder Interface" className="w-full h-full object-cover object-left-top rounded-lg" />
+                            <img src={presentationMockup} alt="Celeste AI Presentation Builder Interface" className="w-full h-full object-cover object-left-top rounded-lg" />
                         </ContainerScroll>
                     </motion.div>
                 </div>
