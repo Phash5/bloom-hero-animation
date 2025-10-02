@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import celesteMockup from "@/assets/celeste-mockup.png";
 function ElegantShape({
   className,
@@ -145,37 +146,35 @@ function CelesteHero() {
 
                     {/* Right Visual */}
                     <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible" className="relative lg:order-last order-first">
-                        <div className="relative">
-                            {/* Glow effect behind mockup */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-rose-500/20 blur-3xl rounded-3xl transform rotate-3" />
-                            
-                            {/* Product mockup */}
-                            <div className="relative bg-white/[0.02] backdrop-blur border border-white/[0.1] rounded-2xl p-4 shadow-2xl">
-                                <img src={celesteMockup} alt="Celeste AI Presentation Builder Interface" className="w-full h-auto rounded-lg shadow-lg" />
-                            </div>
+                        <ContainerScroll
+                            titleComponent={
+                                <div className="relative">
+                                    {/* Floating elements */}
+                                    <motion.div animate={{
+                                        y: [0, -10, 0]
+                                    }} transition={{
+                                        duration: 3,
+                                        repeat: Infinity,
+                                        ease: "easeInOut"
+                                    }} className="absolute -top-6 -left-6 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg z-10">
+                                        ✨ AI Generated
+                                    </motion.div>
 
-                            {/* Floating elements */}
-                            <motion.div animate={{
-              y: [0, -10, 0]
-            }} transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }} className="absolute -top-6 -left-6 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
-                                ✨ AI Generated
-                            </motion.div>
-
-                            <motion.div animate={{
-              y: [0, 10, 0]
-            }} transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1
-            }} className="absolute -bottom-4 -right-4 bg-gradient-to-r from-rose-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
-                                🚀 Launch Ready
-                            </motion.div>
-                        </div>
+                                    <motion.div animate={{
+                                        y: [0, 10, 0]
+                                    }} transition={{
+                                        duration: 4,
+                                        repeat: Infinity,
+                                        ease: "easeInOut",
+                                        delay: 1
+                                    }} className="absolute -bottom-4 -right-4 bg-gradient-to-r from-rose-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg z-10">
+                                        🚀 Launch Ready
+                                    </motion.div>
+                                </div>
+                            }
+                        >
+                            <img src={celesteMockup} alt="Celeste AI Presentation Builder Interface" className="w-full h-full object-cover object-left-top rounded-lg" />
+                        </ContainerScroll>
                     </motion.div>
                 </div>
             </div>
