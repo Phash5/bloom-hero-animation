@@ -6,8 +6,7 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ContainerScroll } from "@/components/ui/container-scroll-animation";
-import presentationMockup from "@/assets/presentation-mockup.png";
+import GlitchText from "@/components/ui/glitch-text";
 function ElegantShape({
   className,
   delay = 0,
@@ -145,36 +144,15 @@ function CelesteHero() {
                     </div>
 
                     {/* Right Visual */}
-                    <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible" className="relative lg:order-last order-first">
-                        <ContainerScroll
-                            titleComponent={
-                                <div className="relative">
-                                    {/* Floating elements */}
-                                    <motion.div animate={{
-                                        y: [0, -10, 0]
-                                    }} transition={{
-                                        duration: 3,
-                                        repeat: Infinity,
-                                        ease: "easeInOut"
-                                    }} className="absolute -top-6 -left-6 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg z-10">
-                                        ✨ AI Generated
-                                    </motion.div>
-
-                                    <motion.div animate={{
-                                        y: [0, 10, 0]
-                                    }} transition={{
-                                        duration: 4,
-                                        repeat: Infinity,
-                                        ease: "easeInOut",
-                                        delay: 1
-                                    }} className="absolute -bottom-4 -right-4 bg-gradient-to-r from-rose-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg z-10">
-                                        🚀 Launch Ready
-                                    </motion.div>
-                                </div>
-                            }
+                    <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible" className="relative lg:order-last order-first flex items-center justify-center">
+                        <GlitchText 
+                            speed={0.5} 
+                            enableShadows={true} 
+                            enableOnHover={false}
+                            className="text-8xl md:text-9xl lg:text-[12rem] font-bold bg-clip-text text-transparent bg-gradient-to-r from-celeste-primary to-celeste-secondary"
                         >
-                            <img src={presentationMockup} alt="Celeste AI Presentation Builder Interface" className="w-full h-full object-contain rounded-lg" />
-                        </ContainerScroll>
+                            Celeste
+                        </GlitchText>
                     </motion.div>
                 </div>
             </div>
