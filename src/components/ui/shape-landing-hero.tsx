@@ -148,8 +148,8 @@ function CelesteHero() {
                         <GlitchText 
                             speed={0.5} 
                             enableShadows={true} 
-                            enableOnHover={false}
-                            className="text-8xl md:text-9xl lg:text-[12rem] font-bold bg-clip-text text-transparent bg-gradient-to-r from-celeste-primary to-celeste-secondary"
+                            enableOnHover={true}
+                            className="text-8xl md:text-9xl lg:text-[12rem] font-bold text-white cursor-pointer"
                         >
                             Celeste
                         </GlitchText>
