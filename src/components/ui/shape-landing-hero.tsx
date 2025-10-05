@@ -87,52 +87,59 @@ function CelesteHero() {
                 <div className="flex items-center justify-center max-w-7xl mx-auto">
                     {/* Left Content */}
                     <div className="text-center max-w-4xl">
+                        <motion.div custom={0} variants={fadeUpVariants} initial="hidden" animate="visible" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.08] mb-8 md:mb-12">
+                            <Sparkles className="h-4 w-4 text-indigo-400" />
+                            <span className="text-sm text-white/60 tracking-wide">
+                                AI-Powered Presentation Builder
+                            </span>
+                        </motion.div>
+
                         <motion.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 tracking-tight leading-tight">
+                                <span className="text-white">
+                                    Meet Celeste:
+                                </span>
+                                <br />
                                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-celeste-primary to-celeste-secondary">
-                                    Presentations. Reimagined by AI.
+                                    Your AI Presentation Partner
                                 </span>
                             </h1>
                         </motion.div>
 
                         <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
-                            <p className="text-2xl sm:text-3xl text-white/90 mb-12 leading-relaxed font-light max-w-3xl mx-auto">
-                                Celeste turns your ideas into beautifully designed presentations — instantly.
-                            </p>
+                            <p className="text-xl sm:text-2xl text-white/70 mb-10 leading-relaxed font-light max-w-2xl mx-auto">Create stunning presentations in minutes, not hours. Let Celeste handle the design while you focus on your message. Professional results, zero design skills required.</p>
                         </motion.div>
 
-                        <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible">
-                            <div className="text-base sm:text-lg text-white/70 mb-12 leading-relaxed space-y-4 max-w-3xl mx-auto">
-                                <p className="font-light">Great stories deserve more than slides.<br />
-                                They deserve emotion, rhythm, and elegance.</p>
-                                
-                                <p className="font-light">Celeste is an AI-powered presentation builder that understands your intent — writing, designing, and refining every frame with effortless precision.<br />
-                                It's not just faster. It's thoughtful.<br />
-                                It's not just beautiful. It's yours.</p>
-                                
-                                <p className="font-light">Built for creators who care about every detail.<br />
-                                For teams that move fast, and for ideas that deserve to shine.</p>
+                        {/* Social Proof & Urgency */}
+                        <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible" className="mb-6">
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-white/60 mb-4">
+                                <div className="flex items-center gap-2">
+                                    <Users className="h-4 w-4" />
+                                    <span className="text-sm font-medium">Join 1,000+ professionals already on the list</span>
+                                </div>
+                                <div className="px-3 py-1 bg-celeste-primary/20 border border-celeste-primary/30 rounded-full">
+                                    <span className="text-xs text-celeste-primary font-medium">✨ Beta opens November 2025</span>
+                                </div>
                             </div>
                         </motion.div>
 
-                        {/* Call to Action */}
-                        <motion.div custom={4} variants={fadeUpVariants} initial="hidden" animate="visible" className="mb-6">
-                            <div className="flex flex-col gap-4 max-w-lg mx-auto">
-                                <Button className="h-14 px-12 bg-gradient-to-r from-celeste-primary to-celeste-secondary hover:from-celeste-primary/90 hover:to-celeste-secondary/90 text-white font-semibold rounded-2xl transition-all duration-300 hover:shadow-[var(--shadow-celeste-glow)] hover:scale-105 text-lg">
-                                    Join the Waitlist
+                        {/* Email Capture Form */}
+                        <motion.div custom={4} variants={fadeUpVariants} initial="hidden" animate="visible" className="mb-8">
+                            <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                                <Input type="email" placeholder="Enter your email address" className="flex-1 bg-white/[0.08] border-white/[0.15] text-white placeholder:text-white/50 focus:border-celeste-primary/50 focus:ring-celeste-primary/20 h-14 text-lg rounded-2xl px-6 transition-all duration-300" />
+                                <Button className="h-14 px-8 bg-gradient-to-r from-celeste-primary to-celeste-secondary hover:from-celeste-primary/90 hover:to-celeste-secondary/90 text-white font-semibold whitespace-nowrap rounded-2xl transition-all duration-300 hover:shadow-[var(--shadow-celeste-glow)] hover:scale-105">
+                                    Get Early Access
+                                    <ArrowRight className="ml-2 h-5 w-5" />
                                 </Button>
-                                <p className="text-white/70 text-sm font-light">
-                                    Experience the future of storytelling.
-                                </p>
                             </div>
                         </motion.div>
 
-                        {/* Microcopy */}
-                        <motion.div custom={5} variants={fadeUpVariants} initial="hidden" animate="visible" className="mt-8">
-                            <p className="text-white/50 text-xs font-light tracking-wide">
-                                Early access for visionaries.<br />
-                                Simple. Intelligent. Celeste.
-                            </p>
+                        {/* Features List */}
+                        <motion.div custom={5} variants={fadeUpVariants} initial="hidden" animate="visible" className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-12 max-w-md mx-auto">
+                            {["AI-generated content", "Professional templates", "One-click design", "Export anywhere"].map((feature, index) => <div key={index} className="flex items-center gap-2 text-white/60">
+                                    <CheckCircle className="h-4 w-4 text-indigo-400 flex-shrink-0" />
+                                    <span className="text-sm">{feature}</span>
+                                </div>)}
                         </motion.div>
                     </div>
 
