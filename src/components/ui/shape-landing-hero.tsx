@@ -107,7 +107,7 @@ function CelesteHero() {
                         </motion.div>
 
                         <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
-                            <p className="text-xl sm:text-2xl text-white/70 mb-10 leading-relaxed font-light max-w-2xl mx-auto">Create stunning presentations in minutes, not hours. Let Celeste handle the design while you focus on your message. Professional results, zero design skills required.</p>
+                            <p className="text-xl sm:text-2xl text-white/70 mb-10 leading-relaxed font-light max-w-2xl mx-auto">Celete is an AI-powered presentation builder that understands your intent- writing, designing, and refining every frame with effortless precision. It's not just faster. It's thoughtful. It's not just beautiful. It's yours..</p>
                         </motion.div>
 
                         {/* Social Proof & Urgency */}
@@ -115,7 +115,7 @@ function CelesteHero() {
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-white/60 mb-4">
                                 <div className="flex items-center gap-2">
                                     <Users className="h-4 w-4" />
-                                    <span className="text-sm font-medium">Join 1,000+ professionals already on the list</span>
+                                    <span className="text-sm font-medium">Experience the future of storytelling</span>
                                 </div>
                                 <div className="px-3 py-1 bg-celeste-primary/20 border border-celeste-primary/30 rounded-full">
                                     <span className="text-xs text-celeste-primary font-medium">✨ Beta opens November 2025</span>
@@ -136,7 +136,7 @@ function CelesteHero() {
 
                         {/* Microcopy */}
                         <motion.div custom={5} variants={fadeUpVariants} initial="hidden" animate="visible" className="mt-12 max-w-md mx-auto">
-                            <p className="text-sm text-white/50 text-center leading-relaxed">
+                            <p className="text-center leading-relaxed text-base text-slate-50">
                                 Early access for visionaries.<br />
                                 Simple. Intelligent. Celeste.
                             </p>
