@@ -134,12 +134,12 @@ function CelesteHero() {
                             </div>
                         </motion.div>
 
-                        {/* Features List */}
-                        <motion.div custom={5} variants={fadeUpVariants} initial="hidden" animate="visible" className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-12 max-w-md mx-auto">
-                            {["AI-generated content", "Professional templates", "One-click design", "Export anywhere"].map((feature, index) => <div key={index} className="flex items-center gap-2 text-white/60">
-                                    <CheckCircle className="h-4 w-4 text-indigo-400 flex-shrink-0" />
-                                    <span className="text-sm">{feature}</span>
-                                </div>)}
+                        {/* Microcopy */}
+                        <motion.div custom={5} variants={fadeUpVariants} initial="hidden" animate="visible" className="mt-12 max-w-md mx-auto">
+                            <p className="text-sm text-white/50 text-center leading-relaxed">
+                                Early access for visionaries.<br />
+                                Simple. Intelligent. Celeste.
+                            </p>
                         </motion.div>
                     </div>
 
