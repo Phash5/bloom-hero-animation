@@ -143,17 +143,6 @@ function CelesteHero() {
                         </motion.div>
                     </div>
 
-                    {/* Right Visual */}
-                    <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible" className="relative lg:order-last order-first flex items-center justify-center">
-                        <GlitchText 
-                            speed={0.5} 
-                            enableShadows={true} 
-                            enableOnHover={true}
-                            className="text-8xl md:text-9xl lg:text-[12rem] font-bold text-white cursor-pointer"
-                        >
-                            Celeste
-                        </GlitchText>
-                    </motion.div>
                 </div>
             </div>
 
