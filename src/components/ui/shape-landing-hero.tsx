@@ -84,9 +84,9 @@ function CelesteHero() {
             </div>
 
             <div className="relative z-10 container mx-auto px-4 md:px-6">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
+                <div className="flex items-center justify-center max-w-7xl mx-auto">
                     {/* Left Content */}
-                    <div className="text-center lg:text-left">
+                    <div className="text-center max-w-4xl">
                         <motion.div custom={0} variants={fadeUpVariants} initial="hidden" animate="visible" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.08] mb-8 md:mb-12">
                             <Sparkles className="h-4 w-4 text-indigo-400" />
                             <span className="text-sm text-white/60 tracking-wide">
@@ -107,12 +107,12 @@ function CelesteHero() {
                         </motion.div>
 
                         <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
-                            <p className="text-xl sm:text-2xl text-white/70 mb-10 leading-relaxed font-light max-w-2xl lg:mx-0 mx-auto">Create stunning presentations in minutes, not hours. Let Celeste handle the design while you focus on your message. Professional results, zero design skills required.</p>
+                            <p className="text-xl sm:text-2xl text-white/70 mb-10 leading-relaxed font-light max-w-2xl mx-auto">Create stunning presentations in minutes, not hours. Let Celeste handle the design while you focus on your message. Professional results, zero design skills required.</p>
                         </motion.div>
 
                         {/* Social Proof & Urgency */}
                         <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible" className="mb-6">
-                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 text-white/60 mb-4">
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-white/60 mb-4">
                                 <div className="flex items-center gap-2">
                                     <Users className="h-4 w-4" />
                                     <span className="text-sm font-medium">Join 1,000+ professionals already on the list</span>
@@ -125,7 +125,7 @@ function CelesteHero() {
 
                         {/* Email Capture Form */}
                         <motion.div custom={4} variants={fadeUpVariants} initial="hidden" animate="visible" className="mb-8">
-                            <div className="flex flex-col sm:flex-row gap-4 max-w-lg lg:mx-0 mx-auto">
+                            <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
                                 <Input type="email" placeholder="Enter your email address" className="flex-1 bg-white/[0.08] border-white/[0.15] text-white placeholder:text-white/50 focus:border-celeste-primary/50 focus:ring-celeste-primary/20 h-14 text-lg rounded-2xl px-6 transition-all duration-300" />
                                 <Button className="h-14 px-8 bg-gradient-to-r from-celeste-primary to-celeste-secondary hover:from-celeste-primary/90 hover:to-celeste-secondary/90 text-white font-semibold whitespace-nowrap rounded-2xl transition-all duration-300 hover:shadow-[var(--shadow-celeste-glow)] hover:scale-105">
                                     Get Early Access
@@ -135,7 +135,7 @@ function CelesteHero() {
                         </motion.div>
 
                         {/* Features List */}
-                        <motion.div custom={5} variants={fadeUpVariants} initial="hidden" animate="visible" className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-12 max-w-md lg:mx-0 mx-auto">
+                        <motion.div custom={5} variants={fadeUpVariants} initial="hidden" animate="visible" className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-12 max-w-md mx-auto">
                             {["AI-generated content", "Professional templates", "One-click design", "Export anywhere"].map((feature, index) => <div key={index} className="flex items-center gap-2 text-white/60">
                                     <CheckCircle className="h-4 w-4 text-indigo-400 flex-shrink-0" />
                                     <span className="text-sm">{feature}</span>
