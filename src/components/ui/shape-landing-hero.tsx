@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { Circle, Sparkles, ArrowRight, Users, CheckCircle } from "lucide-react";
+import { Circle, Sparkles, ArrowRight, Users, CheckCircle, Send } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -132,12 +132,17 @@ function CelesteHero() {
                             <p className="text-xl sm:text-2xl mb-10 leading-relaxed font-light max-w-2xl mx-auto text-slate-50">Celeste is an AI-powered presentation builder that understands your intent- writing, designing, and refining every frame with effortless precision. It's not just faster. It's thoughtful. It's not just beautiful. It's yours..</p>
                         </motion.div>
 
-                        {/* Social Proof & Urgency */}
+                        {/* Email Input */}
                         <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible" className="mb-6">
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-white/60 mb-4">
-                                <div className="flex items-center gap-2">
-                                    <Users className="h-4 w-4" />
-                                    <span className="text-sm font-medium">Experience the future of storytelling</span>
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
+                                <div className="relative min-w-[300px]">
+                                    <Input className="pe-9 bg-white/5 border-white/10 text-white placeholder:text-white/50" placeholder="Enter your email" type="email" />
+                                    <button
+                                        className="absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-lg border border-transparent text-white/60 outline-offset-2 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring/70 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
+                                        aria-label="Subscribe"
+                                    >
+                                        <Send size={16} strokeWidth={2} aria-hidden="true" />
+                                    </button>
                                 </div>
                                 <div className="px-3 py-1 bg-celeste-primary/20 border border-celeste-primary/30 rounded-full">
                                     <span className="text-xs text-celeste-primary font-medium">✨ Beta opens November 2025</span>
