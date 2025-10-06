@@ -90,7 +90,7 @@ function CelesteHero() {
       }
     })
   };
-  return <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030303]">
+  return <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030303] py-12">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
 
             <div className="absolute inset-0 overflow-hidden">
@@ -105,10 +105,10 @@ function CelesteHero() {
                 <ElegantShape delay={0.7} width={150} height={40} rotate={-25} gradient="from-cyan-500/[0.15]" className="left-[20%] md:left-[25%] top-[5%] md:top-[10%]" />
             </div>
 
-            <div className="relative z-10 container mx-auto px-4 md:px-6">
-                <div className="flex items-center justify-center max-w-7xl mx-auto">
+            <div className="relative z-10 container mx-auto px-4 md:px-6 w-full">
+                <div className="flex items-center justify-center w-full">
                     {/* Left Content */}
-                    <div className="text-center max-w-4xl">
+                    <div className="text-center max-w-4xl w-full">
                         <motion.div custom={0} variants={fadeUpVariants} initial="hidden" animate="visible" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.08] mb-8 md:mb-12">
                             <Sparkles className="h-4 w-4 text-indigo-400" />
                             <span className="text-sm text-white/60 tracking-wide">
@@ -129,13 +129,13 @@ function CelesteHero() {
                         </motion.div>
 
                         <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
-                            <p className="text-xl sm:text-2xl mb-10 leading-relaxed font-light max-w-2xl mx-auto text-slate-50">Celeste is an AI-powered presentation builder that understands your intent- writing, designing, and refining every frame with effortless precision. It's not just faster. It's thoughtful. It's not just beautiful. It's yours..</p>
+                            <p className="text-lg sm:text-xl mb-8 leading-relaxed font-light max-w-2xl mx-auto text-slate-50">Celeste is an AI-powered presentation builder that understands your intent- writing, designing, and refining every frame with effortless precision. It's not just faster. It's thoughtful. It's not just beautiful. It's yours..</p>
                         </motion.div>
 
                         {/* Email Input */}
-                        <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible" className="mb-6">
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
-                                <div className="relative min-w-[300px]">
+                        <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible" className="mb-8">
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                                <div className="relative w-full sm:w-auto sm:min-w-[320px]">
                                     <Input className="pe-9 bg-white/5 border-white/10 text-white placeholder:text-white/50" placeholder="Enter your email" type="email" />
                                     <button
                                         className="absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-lg border border-transparent text-white/60 outline-offset-2 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring/70 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
@@ -151,8 +151,8 @@ function CelesteHero() {
                         </motion.div>
 
                         {/* CTA Button */}
-                        <motion.div custom={4} variants={fadeUpVariants} initial="hidden" animate="visible" className="mb-8">
-                            <div className="flex justify-center">
+                        <motion.div custom={4} variants={fadeUpVariants} initial="hidden" animate="visible" className="mb-10">
+                            <div className="flex justify-center w-full">
                                 <div className="relative inline-block w-64 h-[3.5em] mx-auto group bg-white dark:bg-black border-black dark:border-white border-2 rounded-lg">
                                     <div className="absolute w-[112.81%] h-[128.57%] top-[8.57%] left-1/2 -translate-x-1/2 filter blur-[19px] opacity-70">
                                         <span className="absolute inset-0 rounded-lg bg-[#d9d9d9] filter blur-[6.5px]"></span>
@@ -188,8 +188,8 @@ function CelesteHero() {
                         </motion.div>
 
                         {/* Microcopy */}
-                        <motion.div custom={5} variants={fadeUpVariants} initial="hidden" animate="visible" className="mt-12 max-w-md mx-auto">
-                            <p className="text-center leading-relaxed text-base text-slate-50">
+                        <motion.div custom={5} variants={fadeUpVariants} initial="hidden" animate="visible" className="max-w-md mx-auto">
+                            <p className="text-center leading-relaxed text-sm text-slate-400">
                                 Early access for visionaries.<br />
                                 Simple. Intelligent. Celeste.
                             </p>
