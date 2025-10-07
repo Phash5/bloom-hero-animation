@@ -1,12 +1,9 @@
 services:
-  - type: static_site
+  - type: web
+    runtime: static
     name: celestehq-waitlist
-    rootDirectory: bloom-hero-animation
     buildCommand: npm install && npm run build
-    publishPath: dist
-    previewBranch: preview/*
-    environments:
-      - production
+    staticPublishPath: dist
     domains:
       - celestehq.com
       - www.celestehq.com
@@ -16,15 +13,15 @@ services:
         previewValue: https://formspree.io/f/xanpdwvk
         sync: false
     headers:
-      - path: /
+      - path: /*
         name: Strict-Transport-Security
         value: max-age=31536000; includeSubDomains; preload
-      - path: /
+      - path: /*
         name: X-Content-Type-Options
         value: nosniff
-      - path: /
+      - path: /*
         name: X-Frame-Options
         value: DENY
-      - path: /
+      - path: /*
         name: Referrer-Policy
         value: no-referrer-when-downgrade
