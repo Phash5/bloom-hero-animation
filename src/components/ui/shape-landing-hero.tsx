@@ -149,28 +149,6 @@ function CelesteHero() {
                             </div>
                         </motion.div>
 
-                        {/* CTA Button */}
-                        <motion.div custom={4} variants={fadeUpVariants} initial="hidden" animate="visible" className="mb-10">
-                            <div className="flex justify-center w-full">
-                                <div className="relative inline-block w-64 h-[3.5em] mx-auto group bg-white dark:bg-black border-black dark:border-white border-2 rounded-lg">
-                                    <div className="absolute w-[112.81%] h-[128.57%] top-[8.57%] left-1/2 -translate-x-1/2 filter blur-[19px] opacity-70">
-                                        <span className="absolute inset-0 rounded-lg bg-[#d9d9d9] filter blur-[6.5px]"></span>
-                                        <div className="relative w-full h-full overflow-hidden rounded-lg">
-                                            <Liquid isHovered={isHovered} colors={COLORS} />
-                                        </div>
-                                    </div>
-                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40%] w-[92.23%] h-[112.85%] rounded-lg bg-[#010128] filter blur-[7.3px]"></div>
-                                    <div className="relative w-full h-full overflow-hidden rounded-lg">
-                                        <span className="absolute inset-0 rounded-lg bg-[#d9d9d9]"></span>
-                                        <span className="absolute inset-0 rounded-lg bg-black"></span>
-                                        <Liquid isHovered={isHovered} colors={COLORS} />
-                                        
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </motion.div>
-
                         {/* Microcopy */}
                         <motion.div custom={5} variants={fadeUpVariants} initial="hidden" animate="visible" className="max-w-md mx-auto">
                             <p className="text-center leading-relaxed text-sm text-slate-400">
