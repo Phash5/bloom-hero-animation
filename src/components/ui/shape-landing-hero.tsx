@@ -137,7 +137,7 @@ function CelesteHero() {
                             <div className="flex flex-col items-center justify-center gap-4">
                                 <div className="relative w-full max-w-xl">
                                 <div className="relative flex items-center gap-2 p-1.5 bg-white/5 border-2 border-white/10 rounded-full backdrop-blur-sm">
-                                    <Input className="flex-1 bg-transparent border-0 text-white placeholder:text-white/50 focus-visible:ring-0 focus-visible:ring-offset-0 h-12 px-6 rounded-full" placeholder="Enter your email" type="email" />
+                                    <Input placeholder="Enter your email" type="email" className="flex-1 bg-transparent border-0 text-white placeholder:text-white/50 focus-visible:ring-0 focus-visible:ring-offset-0 h-12 px-6 rounded-full" />
                                     <RainbowButton>
                                         JOIN WAITLIST
                                     </RainbowButton>
