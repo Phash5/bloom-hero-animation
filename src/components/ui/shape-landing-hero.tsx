@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import GlitchText from "@/components/ui/glitch-text";
 import { Liquid } from "@/components/ui/button-1";
 import { RainbowButton } from "@/components/ui/rainbow-borders-button";
+import { InteractiveBadge } from "@/components/ui/award-badge";
 function ElegantShape({
   className,
   delay = 0,
@@ -109,11 +110,15 @@ function CelesteHero() {
                 <div className="flex items-center justify-center w-full">
                     {/* Left Content */}
                     <div className="text-center max-w-4xl w-full">
-                        <motion.div custom={0} variants={fadeUpVariants} initial="hidden" animate="visible" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.08] mb-8 md:mb-12">
-                            <Sparkles className="h-4 w-4 text-indigo-400" />
-                            <span className="text-sm text-white/60 tracking-wide">
-                                AI-Powered Presentation Builder
-                            </span>
+                        <motion.div custom={0} variants={fadeUpVariants} initial="hidden" animate="visible" className="mb-8 md:mb-12">
+                            <InteractiveBadge>
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.08]">
+                                    <Sparkles className="h-4 w-4 text-indigo-400" />
+                                    <span className="text-sm text-white/60 tracking-wide">
+                                        AI-Powered Presentation Builder
+                                    </span>
+                                </div>
+                            </InteractiveBadge>
                         </motion.div>
 
                         <motion.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
