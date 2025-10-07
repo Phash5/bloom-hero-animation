@@ -70,9 +70,8 @@ const COLORS = {
   color14: '#B6BAF6',
   color15: '#C1BEEB',
   color16: '#290ECB',
-  color17: '#3F4CC0',
+  color17: '#3F4CC0'
 };
-
 function CelesteHero() {
   const [isHovered, setIsHovered] = useState(false);
   const fadeUpVariants = {
@@ -137,14 +136,8 @@ function CelesteHero() {
                             <div className="flex flex-col items-center justify-center gap-4">
                                 <div className="relative w-full max-w-xl">
                                     <div className="relative flex items-center gap-2 p-1.5 bg-white/5 border-2 border-white/10 rounded-full backdrop-blur-sm">
-                                        <Input 
-                                            className="flex-1 bg-transparent border-0 text-white placeholder:text-white/50 focus-visible:ring-0 focus-visible:ring-offset-0 h-12 px-6 rounded-full" 
-                                            placeholder="email@perplexity.ai" 
-                                            type="email" 
-                                        />
-                                        <Button 
-                                            className="h-12 px-8 bg-white/90 hover:bg-white text-black font-semibold rounded-full whitespace-nowrap"
-                                        >
+                                        <Input className="flex-1 bg-transparent border-0 text-white placeholder:text-white/50 focus-visible:ring-0 focus-visible:ring-offset-0 h-12 px-6 rounded-full" placeholder="email@perplexity.ai" type="email" />
+                                        <Button className="h-12 px-8 bg-white/90 hover:bg-white text-black font-semibold rounded-full whitespace-nowrap">
                                             JOIN WAITLIST
                                         </Button>
                                     </div>
@@ -170,23 +163,11 @@ function CelesteHero() {
                                         <span className="absolute inset-0 rounded-lg bg-[#d9d9d9]"></span>
                                         <span className="absolute inset-0 rounded-lg bg-black"></span>
                                         <Liquid isHovered={isHovered} colors={COLORS} />
-                                        {[1, 2, 3, 4, 5].map((i) => (
-                                            <span
-                                                key={i}
-                                                className={`absolute inset-0 rounded-lg border-solid border-[3px] border-gradient-to-b from-transparent to-white mix-blend-overlay filter ${i <= 2 ? 'blur-[3px]' : i === 3 ? 'blur-[5px]' : 'blur-[4px]'}`}></span>
-                                        ))}
+                                        {[1, 2, 3, 4, 5].map(i => <span key={i} className={`absolute inset-0 rounded-lg border-solid border-[3px] border-gradient-to-b from-transparent to-white mix-blend-overlay filter ${i <= 2 ? 'blur-[3px]' : i === 3 ? 'blur-[5px]' : 'blur-[4px]'}`}></span>)}
                                         <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40%] w-[70.8%] h-[42.85%] rounded-lg filter blur-[15px] bg-[#006]"></span>
                                     </div>
-                                    <button
-                                        className="absolute inset-0 rounded-lg bg-transparent cursor-pointer"
-                                        aria-label="Join Waitlist"
-                                        type="button"
-                                        onMouseEnter={() => setIsHovered(true)}
-                                        onMouseLeave={() => setIsHovered(false)}>
-                                        <span className="flex items-center justify-center gap-2 rounded-lg group-hover:text-yellow-400 text-white text-xl font-semibold tracking-wide whitespace-nowrap">
-                                            Join Waitlist!
-                                            <ArrowRight className="w-6 h-6 flex-shrink-0" />
-                                        </span>
+                                    <button className="absolute inset-0 rounded-lg bg-transparent cursor-pointer" aria-label="Join Waitlist" type="button" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+                                        
                                     </button>
                                 </div>
                             </div>
