@@ -164,7 +164,7 @@ function CelesteHero() {
                                         <span className="absolute inset-0 rounded-lg bg-[#d9d9d9]"></span>
                                         <span className="absolute inset-0 rounded-lg bg-black"></span>
                                         <Liquid isHovered={isHovered} colors={COLORS} />
-                                        <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40%] w-[70.8%] h-[42.85%] rounded-lg filter blur-[15px] bg-[#006]"></span>
+                                        
                                     </div>
                                     
                                 </div>
