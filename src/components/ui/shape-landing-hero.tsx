@@ -151,7 +151,7 @@ function CelesteHero() {
 
                         {/* Microcopy */}
                         <motion.div custom={5} variants={fadeUpVariants} initial="hidden" animate="visible" className="max-w-md mx-auto">
-                            <p className="text-center leading-relaxed text-sm text-slate-400">
+                            <p className="text-center leading-relaxed text-sm text-slate-50">
                                 Early access for visionaries.<br />
                                 Simple. Intelligent. Celeste.
                             </p>
