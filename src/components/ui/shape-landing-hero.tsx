@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { Circle, Sparkles, ArrowRight, Users, CheckCircle, Send } from "lucide-react";
+import { Circle, Sparkles, ArrowRight, Users, CheckCircle, Send, Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -10,6 +10,8 @@ import GlitchText from "@/components/ui/glitch-text";
 import { Liquid } from "@/components/ui/button-1";
 import { RainbowButton } from "@/components/ui/rainbow-borders-button";
 import { InteractiveBadge } from "@/components/ui/award-badge";
+import { submitWaitlistEmail } from "@/lib/waitlist";
+import { useToast } from "@/hooks/use-toast";
 function ElegantShape({
   className,
   delay = 0,
@@ -139,19 +141,7 @@ function CelesteHero() {
 
                         {/* Email Input */}
                         <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible" className="mb-8">
-                            <div className="flex flex-col items-center justify-center gap-4">
-                                <div className="relative w-full max-w-xl">
-                                <div className="relative flex items-center gap-2 p-1.5 bg-white/5 border-2 border-white/10 rounded-full backdrop-blur-sm">
-                                    <Input placeholder="Enter your email" type="email" className="flex-1 bg-transparent border-0 text-white placeholder:text-white/50 focus-visible:ring-0 focus-visible:ring-offset-0 h-12 px-6 rounded-full" />
-                                    <RainbowButton>
-                                        JOIN WAITLIST
-                                    </RainbowButton>
-                                </div>
-                                </div>
-                                <div className="px-3 py-1 bg-celeste-primary/20 border border-celeste-primary/30 rounded-full">
-                                    <span className="text-xs text-celeste-primary font-medium">✨ Beta opens November 2025</span>
-                                </div>
-                            </div>
+                            <EmailCapture />
                         </motion.div>
 
                         {/* Microcopy */}
@@ -170,3 +160,71 @@ function CelesteHero() {
         </div>;
 }
 export { CelesteHero };
+
+function EmailCapture() {
+    const [email, setEmail] = useState("");
+    const [loading, setLoading] = useState(false);
+    const { toast } = useToast();
+
+    const isValidEmail = (value: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
+    const handleSubmit = async () => {
+        if (!isValidEmail(email)) {
+            toast({
+                title: "Please enter a valid email",
+                description: "Example: name@company.com",
+                variant: "destructive",
+            });
+            return;
+        }
+
+        setLoading(true);
+        try {
+            await submitWaitlistEmail(email);
+            toast({
+                title: "You're on the list!",
+                description: "We'll email you when the beta opens.",
+            });
+            setEmail("");
+        } catch (err: any) {
+            toast({
+                title: "Submission failed",
+                description: err?.message || "Please try again in a moment.",
+                variant: "destructive",
+            });
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    return (
+        <div className="flex flex-col items-center justify-center gap-4">
+            <div className="relative w-full max-w-xl">
+                <div className="relative flex items-center gap-2 p-1.5 bg-white/5 border-2 border-white/10 rounded-full backdrop-blur-sm">
+                    <Input
+                        placeholder="Enter your email"
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="flex-1 bg-transparent border-0 text-white placeholder:text-white/50 focus-visible:ring-0 focus-visible:ring-offset-0 h-12 px-6 rounded-full"
+                    />
+                    <RainbowButton onClick={handleSubmit} disabled={loading || !email}>
+                        {loading ? (
+                            <span className="inline-flex items-center gap-2">
+                                <Loader2 className="h-4 w-4 animate-spin" />
+                                Submitting...
+                            </span>
+                        ) : (
+                            <span className="inline-flex items-center gap-2">
+                                JOIN WAITLIST <Send className="h-4 w-4" />
+                            </span>
+                        )}
+                    </RainbowButton>
+                </div>
+            </div>
+            <div className="px-3 py-1 bg-celeste-primary/20 border border-celeste-primary/30 rounded-full">
+                <span className="text-xs text-celeste-primary font-medium">✨ Beta opens November 2025</span>
+            </div>
+        </div>
+    );
+}
