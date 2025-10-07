@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import GlitchText from "@/components/ui/glitch-text";
 import { Liquid } from "@/components/ui/button-1";
+import { RainbowButton } from "@/components/ui/rainbow-borders-button";
 function ElegantShape({
   className,
   delay = 0,
@@ -135,12 +136,12 @@ function CelesteHero() {
                         <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible" className="mb-8">
                             <div className="flex flex-col items-center justify-center gap-4">
                                 <div className="relative w-full max-w-xl">
-                                    <div className="relative flex items-center gap-2 p-1.5 bg-white/5 border-2 border-white/10 rounded-full backdrop-blur-sm">
-                                        <Input className="flex-1 bg-transparent border-0 text-white placeholder:text-white/50 focus-visible:ring-0 focus-visible:ring-offset-0 h-12 px-6 rounded-full" placeholder="email@perplexity.ai" type="email" />
-                                        <Button className="h-12 px-8 bg-white/90 hover:bg-white text-black font-semibold rounded-full whitespace-nowrap">
-                                            JOIN WAITLIST
-                                        </Button>
-                                    </div>
+                                <div className="relative flex items-center gap-2 p-1.5 bg-white/5 border-2 border-white/10 rounded-full backdrop-blur-sm">
+                                    <Input className="flex-1 bg-transparent border-0 text-white placeholder:text-white/50 focus-visible:ring-0 focus-visible:ring-offset-0 h-12 px-6 rounded-full" placeholder="email@perplexity.ai" type="email" />
+                                    <RainbowButton>
+                                        JOIN WAITLIST
+                                    </RainbowButton>
+                                </div>
                                 </div>
                                 <div className="px-3 py-1 bg-celeste-primary/20 border border-celeste-primary/30 rounded-full">
                                     <span className="text-xs text-celeste-primary font-medium">✨ Beta opens November 2025</span>
@@ -163,7 +164,6 @@ function CelesteHero() {
                                         <span className="absolute inset-0 rounded-lg bg-[#d9d9d9]"></span>
                                         <span className="absolute inset-0 rounded-lg bg-black"></span>
                                         <Liquid isHovered={isHovered} colors={COLORS} />
-                                        {[1, 2, 3, 4, 5].map(i => {})}
                                         <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40%] w-[70.8%] h-[42.85%] rounded-lg filter blur-[15px] bg-[#006]"></span>
                                     </div>
                                     
