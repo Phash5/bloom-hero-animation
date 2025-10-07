@@ -134,15 +134,20 @@ function CelesteHero() {
 
                         {/* Email Input */}
                         <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible" className="mb-8">
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <div className="relative w-full sm:w-auto sm:min-w-[320px]">
-                                    <Input className="pe-9 bg-white/5 border-white/10 text-white placeholder:text-white/50" placeholder="Enter your email" type="email" />
-                                    <button
-                                        className="absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-lg border border-transparent text-white/60 outline-offset-2 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring/70 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
-                                        aria-label="Subscribe"
-                                    >
-                                        <Send size={16} strokeWidth={2} aria-hidden="true" />
-                                    </button>
+                            <div className="flex flex-col items-center justify-center gap-4">
+                                <div className="relative w-full max-w-xl">
+                                    <div className="relative flex items-center gap-2 p-1.5 bg-white/5 border-2 border-white/10 rounded-full backdrop-blur-sm">
+                                        <Input 
+                                            className="flex-1 bg-transparent border-0 text-white placeholder:text-white/50 focus-visible:ring-0 focus-visible:ring-offset-0 h-12 px-6 rounded-full" 
+                                            placeholder="email@perplexity.ai" 
+                                            type="email" 
+                                        />
+                                        <Button 
+                                            className="h-12 px-8 bg-white/90 hover:bg-white text-black font-semibold rounded-full whitespace-nowrap"
+                                        >
+                                            JOIN WAITLIST
+                                        </Button>
+                                    </div>
                                 </div>
                                 <div className="px-3 py-1 bg-celeste-primary/20 border border-celeste-primary/30 rounded-full">
                                     <span className="text-xs text-celeste-primary font-medium">✨ Beta opens November 2025</span>
