@@ -163,7 +163,7 @@ function CelesteHero() {
                                         <span className="absolute inset-0 rounded-lg bg-[#d9d9d9]"></span>
                                         <span className="absolute inset-0 rounded-lg bg-black"></span>
                                         <Liquid isHovered={isHovered} colors={COLORS} />
-                                        {[1, 2, 3, 4, 5].map(i => <span key={i} className={`absolute inset-0 rounded-lg border-solid border-[3px] border-gradient-to-b from-transparent to-white mix-blend-overlay filter ${i <= 2 ? 'blur-[3px]' : i === 3 ? 'blur-[5px]' : 'blur-[4px]'}`}></span>)}
+                                        {[1, 2, 3, 4, 5].map(i => {})}
                                         <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40%] w-[70.8%] h-[42.85%] rounded-lg filter blur-[15px] bg-[#006]"></span>
                                     </div>
                                     
