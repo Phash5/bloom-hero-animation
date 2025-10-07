@@ -166,9 +166,7 @@ function CelesteHero() {
                                         {[1, 2, 3, 4, 5].map(i => <span key={i} className={`absolute inset-0 rounded-lg border-solid border-[3px] border-gradient-to-b from-transparent to-white mix-blend-overlay filter ${i <= 2 ? 'blur-[3px]' : i === 3 ? 'blur-[5px]' : 'blur-[4px]'}`}></span>)}
                                         <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40%] w-[70.8%] h-[42.85%] rounded-lg filter blur-[15px] bg-[#006]"></span>
                                     </div>
-                                    <button className="absolute inset-0 rounded-lg bg-transparent cursor-pointer" aria-label="Join Waitlist" type="button" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                                        
-                                    </button>
+                                    
                                 </div>
                             </div>
                         </motion.div>
