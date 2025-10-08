@@ -1,27 +1,9 @@
 services:
-  - type: web
-    runtime: static
-    name: celestehq-waitlist
-    buildCommand: npm install && npm run build
+  - type: static_site
+    name: celeste-waitlist
+    buildCommand: bun install && bun run build
     staticPublishPath: dist
-    domains:
-      - celestehq.com
-      - www.celestehq.com
-    envVars:
-      - key: VITE_FORM_ENDPOINT
-        value: https://formspree.io/f/xanpdwvk
-        previewValue: https://formspree.io/f/xanpdwvk
-        sync: false
-    headers:
-      - path: /*
-        name: Strict-Transport-Security
-        value: max-age=31536000; includeSubDomains; preload
-      - path: /*
-        name: X-Content-Type-Options
-        value: nosniff
-      - path: /*
-        name: X-Frame-Options
-        value: DENY
-      - path: /*
-        name: Referrer-Policy
-        value: no-referrer-when-downgrade
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
