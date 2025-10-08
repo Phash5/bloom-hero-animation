@@ -1,0 +1,9 @@
+services:
+  - type: static_site
+    name: celeste-waitlist
+    buildCommand: bun install && bun run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
