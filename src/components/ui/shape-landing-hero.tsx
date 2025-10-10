@@ -136,7 +136,7 @@ function CelesteHero() {
                         </motion.div>
 
                         <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
-                            <p className="text-lg sm:text-xl mb-8 leading-relaxed font-light max-w-2xl mx-auto text-slate-50">Celeste is an AI-powered presentation builder that understands your intent- writing, designing, and refining every frame with effortless precision. It's not just faster. It's thoughtful. It's not just beautiful. It's yours..</p>
+                            <p className="text-lg sm:text-xl mb-8 leading-relaxed font-light max-w-2xl mx-auto text-slate-50">Celeste is an AI-powered presentation builder that understands your intent—writing, designing, and refining every frame with effortless precision. It's not just faster, it's thoughtful, intuitive and just what you need.</p>
                         </motion.div>
 
                         {/* Email Input */}
@@ -147,8 +147,7 @@ function CelesteHero() {
                         {/* Microcopy */}
                         <motion.div custom={5} variants={fadeUpVariants} initial="hidden" animate="visible" className="max-w-md mx-auto">
                             <p className="text-center leading-relaxed text-sm text-slate-50">
-                                Early access for visionaries.<br />
-                                Simple. Intelligent. Celeste.
+                                Early access for visionaries.
                             </p>
                         </motion.div>
                     </div>
