@@ -1,3 +1,5 @@
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mblzzgey";
+
 export async function submitWaitlistEmail(email: string) {
   const endpoint = import.meta.env.VITE_FORM_ENDPOINT;
   if (!endpoint) {
